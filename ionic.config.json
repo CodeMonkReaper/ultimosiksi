@@ -1,0 +1,7 @@
+{
+  "name": "ultimosiksi",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
