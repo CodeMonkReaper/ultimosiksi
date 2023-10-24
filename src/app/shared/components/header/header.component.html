@@ -7,7 +7,13 @@
 
     <ion-title>
       <strong>{{title}}</strong>
-      <div class="admin">A D M I N</div>
+      <div class="admin">REGISTR-APP</div>
     </ion-title>
+    <!-- log out -->
+    <ion-buttons slot="end">
+      <ion-button (click)="signOut()" fill="clear" color="light">
+        <ion-icon name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
