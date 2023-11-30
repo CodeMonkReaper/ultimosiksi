@@ -11,19 +11,20 @@ import { AddUpdatedAssistComponent } from './components/add-updated-assist/add-u
 
 @NgModule({
   declarations: [HeaderComponent,CustomInputComponent,LogoComponent,AddUpdatedAssistComponent],
- 
+
   imports: [
     CommonModule,
     IonicModule,
     ReactiveFormsModule,
     FormsModule,
-    
+
   ],
   exports: [HeaderComponent,
     CustomInputComponent,
     FormsModule,
     ReactiveFormsModule,
     AddUpdatedAssistComponent,
+    LogoComponent,
   ],
 })
 export class SharedModule { }

@@ -15,6 +15,7 @@ export class SignUpPage implements OnInit {
     email: new FormControl('',[Validators.required,Validators.email]),
     password: new FormControl('',[Validators.required]),
     name: new FormControl('',[Validators.required,Validators.minLength(3)]),
+    isTeacher: new FormControl(false),
 
   })
   fireBaseSvc = inject(FirebaseService);
@@ -36,7 +37,7 @@ export class SignUpPage implements OnInit {
      this.form.controls.uid.setValue(uid);
      this.setUserInfo(uid);
 
-      
+
     }).catch(error=>{
       console.log(error);
       this.utilsSVC.presentToast(
@@ -67,7 +68,7 @@ export class SignUpPage implements OnInit {
      this.utilsSVC.saveInLocalStorage('user',this.form.value);
      this.utilsSVC.routerLink('/main/home')
      this.form.reset();
-      
+
     }).catch(error=>{
       console.log(error);
       this.utilsSVC.presentToast(

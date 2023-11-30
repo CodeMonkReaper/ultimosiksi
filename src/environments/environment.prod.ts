@@ -1,11 +1,12 @@
 export const environment = {
   production: true,
-  firebaseConfig : {
-    apiKey: "AIzaSyDNNtvOWcP7gm6UeHORncBkBghatf0M9-c",
-    authDomain: "awesome-2fca2.firebaseapp.com",
-    projectId: "awesome-2fca2",
-    storageBucket: "awesome-2fca2.appspot.com",
-    messagingSenderId: "211751960390",
-    appId: "1:211751960390:web:383882796eb47fcea16f47"
+   firebaseConfig : {
+    apiKey: "AIzaSyB6M3VZtYTYyH4rOobr_5Bz3x0iUKyn5LI",
+    authDomain: "asistenciaqr-a3d58.firebaseapp.com",
+    projectId: "asistenciaqr-a3d58",
+    storageBucket: "asistenciaqr-a3d58.appspot.com",
+    messagingSenderId: "758595575978",
+    appId: "1:758595575978:web:9a5ce5f406c87b44ecf0d3",
+    measurementId: "G-KJ9E7VY5W4"
   },
 };
