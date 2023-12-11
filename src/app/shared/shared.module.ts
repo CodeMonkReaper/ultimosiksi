@@ -6,7 +6,7 @@ import { IonicModule } from '@ionic/angular';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LogoComponent } from './components/logo/logo.component';
 import { AddUpdatedAssistComponent } from './components/add-updated-assist/add-updated-assist.component';
-
+import { ZXingScannerModule } from '@zxing/ngx-scanner';
 
 
 @NgModule({
@@ -17,6 +17,7 @@ import { AddUpdatedAssistComponent } from './components/add-updated-assist/add-u
     IonicModule,
     ReactiveFormsModule,
     FormsModule,
+    ZXingScannerModule,
 
   ],
   exports: [HeaderComponent,

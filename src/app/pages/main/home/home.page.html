@@ -1,18 +1,19 @@
 <app-header title="Inicio"  ></app-header>
 
 <ion-content>
-  <ion-list>
+  <ion-button expand="full" (click)="startScan()">
+    Iniciar Escaneo
+  </ion-button>
+
+  <zxing-scanner
+    *ngIf="isSupported"
+    [torch]="true"
+    (scanSuccess)="onCodeScanned($event)"
+  ></zxing-scanner>
+
+  <ion-list *ngIf="barcodes.length > 0">
     <ion-item *ngFor="let barcode of barcodes">
-      <ion-label position="stacked">{{ barcode.format }}</ion-label>
-      <ion-input type="text" [value]="barcode.rawValue"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label></ion-label>
+      <ion-label position="stacked">{{ barcode }}</ion-label>
     </ion-item>
   </ion-list>
-  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
-    <ion-fab-button (click)="startScan()" [disabled]="!isSupported">
-      <ion-icon name="scan"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
 </ion-content>

@@ -8,6 +8,8 @@ import { HomePageRoutingModule } from './home-routing.module';
 
 import { HomePage } from './home.page';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { ZXingScannerModule } from '@zxing/ngx-scanner';
+
 
 @NgModule({
   imports: [
@@ -16,6 +18,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
     IonicModule,
     HomePageRoutingModule,
     SharedModule,
+    ZXingScannerModule,
   ],
   declarations: [HomePage]
 })

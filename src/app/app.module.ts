@@ -9,14 +9,17 @@ import { AppRoutingModule } from './app-routing.module';
 // =====================================================
 import {AngularFireModule} from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
+import { ZXingScannerModule } from '@zxing/ngx-scanner';
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule,
+    ZXingScannerModule,
      IonicModule.forRoot(),
      AppRoutingModule,
-     AngularFireModule.initializeApp(environment.firebaseConfig)
+     AngularFireModule.initializeApp(environment.firebaseConfig,
+      )
 
-     
+
     ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
